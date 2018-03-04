@@ -15,10 +15,11 @@ class Anagram
     # or 3)
 # this also works but not if you take out the .join - if you remove.join it doesn't pass rspec
 # def match
-    # @possibles = possibles
+    @possibles = possibles
     new_word = @word.split('').sort
     new_arr = possibles.collect {|x| x.split(('')).sort}
     new_arr.select {|str| new_word == str}.join
   end
 
 end
+
