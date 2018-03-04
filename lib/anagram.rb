@@ -13,7 +13,7 @@ class Anagram
     # or 2)
     # possibles.keep_if {|str| word.split('').sort == str.split('').sort}
     # or 3)
-# this also works but not if you take out the .join - if you remove.join it doeesn't pass rspec
+# this also works but not if you take out the .join - if you remove.join it doesn't pass rspec
 # def match
     @possibles = possibles
     new_word = @word.split('').sort
