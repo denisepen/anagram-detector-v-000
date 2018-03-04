@@ -8,7 +8,7 @@ class Anagram
   end
 
   def match(possibles)
-    
+
     possibles.select {|str| word.split('').sort == str.split('').sort}
     # or 2)
     # possibles.keep_if {|str| word.split('').sort == str.split('').sort}
@@ -19,6 +19,6 @@ class Anagram
   #   new_word = word.split('').sort.join
   #   new_arr = possibles.collect {|x| x.split('').sort.join}
   #   new_arr.select {|str| new_word == str}
-  # end
+  end
 
 end
