@@ -8,17 +8,17 @@ class Anagram
   end
 
   def match(possibles)
-
-    possibles.select {|str| word.split('').sort == str.split('').sort}
-    # or 1)
+      1)
+    # possibles.select {|str| word.split('').sort == str.split('').sort}
+    # or 2)
     # possibles.keep_if {|str| word.split('').sort == str.split('').sort}
-    # or2)
-# this also works in repl.it but not according to these tests
+    # or 3)
+# this also works but not if you take out the .join - if you remove.join it doeesn't pass rspec
 # def match
-#     @possibles = possibles
-#     new_word = @word.split('').sort
-#     new_arr = possibles.collect {|x| x.split(('')).sort}
-#     new_arr.select {|str| new_word == str}
+    @possibles = possibles
+    new_word = @word.split('').sort
+    new_arr = possibles.collect {|x| x.split(('')).sort}
+    new_arr.select {|str| new_word == str}.join
 # end
   end
 
