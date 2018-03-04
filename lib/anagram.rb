@@ -17,8 +17,8 @@ class Anagram
 # def match
     @possibles = possibles
     new_word = word.split('').sort.join
-    new_arr = possibles.collect {|x| x.split('').sort.join}
-    new_arr.select {|str| new_word == str}
+    new_arr = possibles.collect {|x| x.split('').sort}
+    new_arr.select {|str| new_word == str}.join
   end
 
 end
