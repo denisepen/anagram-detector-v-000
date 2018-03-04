@@ -19,7 +19,6 @@ class Anagram
     new_word = @word.split('').sort
     new_arr = possibles.collect {|x| x.split(('')).sort}
     new_arr.select {|str| new_word == str}.join
-# end
   end
 
 end
